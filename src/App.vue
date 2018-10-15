@@ -73,4 +73,20 @@ export default {
   .mint-searchbar-inner{
     height: 14px!important;
   }
+  .confirm{
+    color: red;
+  }
+  .mint-msgbox-message{
+    color: #aaa;
+    margin: 0;
+    line-height: 16px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    max-height: 210px;
+    overflow-y: auto;
+    text-align: left;
+  }
+  .mint-msgbox-title{
+    font-size: 14px;
+  }
 </style>

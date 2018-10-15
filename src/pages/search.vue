@@ -26,7 +26,7 @@
           <div style="width: 100%;height: 10px;background: #eee;margin-top: 10px"></div>
           <h5 class="past">历史搜索</h5>
           <ul class="past_search">
-            <li class="past-item" v-for="(value,index) in past_item" :key="index">{{value}}</li>
+            <li class="past-item" v-for="(value,index) in past_item" @click="past_search(index)" :key="index">{{value}}</li>
             <div @click="clearList" class="clear_past"><i class="fa fa-trash-o fa-lg"></i> 清空历史搜索</div>
           </ul>
         </div>
@@ -156,6 +156,10 @@
           this.past_item = []
         },
         hot_search(index){
+          $('.search_val').val(this.slide_item[index]);
+          this.submit();
+        },
+        past_search(index){
           $('.search_val').val(this.slide_item[index]);
           this.submit();
         },

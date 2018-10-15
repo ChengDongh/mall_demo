@@ -311,18 +311,15 @@
       },
       watch: {
         selected: function (val) {
-          console.log(val)
-          this.list = []
+          this.list = [];
            if(val == 1){
              this.val_id = 1;
-             this.shop_list();
            }else if(val == 2){
              this.val_id = 2;
-             this.shop_list();
            }else {
             this.val_id = 3;
-             this.shop_list();
            }
+          this.shop_list();
         },
       }
     }
