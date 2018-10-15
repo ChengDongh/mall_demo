@@ -19,7 +19,7 @@
                 infinite-scroll-disabled="loading"
                 :infinite-scroll-immediate-check="true"
                 infinite-scroll-distance="10">
-              <li class="projectLi" v-for="(value,index) in list" :key="index" @click="toDetail(index)">
+              <li class="projectLi" v-for="(value,index) in list" :key="index" @click="toDetail(value.id)">
                 <div class="liDes">
                   <img :src="value.images" alt="">
                   <div style="display: inline-block;vertical-align: top;font-size: 14px;margin-left: 1.12%;width: 56%">
@@ -67,48 +67,56 @@
             list:[],
             list_0:[
               {
+                id:'1',
                 title:'陶瓷杯',
                 price:100,
                 images:'http://cdn.qiqiangkeji.com/20180926.fff7f6be283261b884d7f400be65e1b1_1024x710.jpg',
                 detail:'手工制作，值得拥有'
               },
               {
+                id:'2',
                 title:'玻璃杯',
                 price:200,
                 images:'http://cdn.qiqiangkeji.com/20180926.9383d209c5395f8598ca9a2731696a94_850x680.jpg',
                 detail:'手工制作，值得拥有，手工制作，值得拥有，快点加入购物车吧！'
               },
               {
+                id:'3',
                 title:'高级吸汗毛巾',
                 price:10,
                 images:'http://cdn.qiqiangkeji.com/20180926.83a59e1a91b31003fc2b2beffd7702b7_320x220.jpg',
                 detail:'手工制作，值得拥有'
               },
               {
+                id:'4',
                 title:'纯棉围巾',
                 price:120,
                 images:'http://cdn.qiqiangkeji.com/20180926.3015a6dd5205bb599914c7b972f11f04_500x500.jpg',
                 detail:'手工制作，值得拥有，手工制作，值得拥有，快点加入购物车吧！'
               },
               {
+                id:'1',
                 title:'陶瓷杯',
                 price:60,
                 images:'http://cdn.qiqiangkeji.com/20180926.fff7f6be283261b884d7f400be65e1b1_1024x710.jpg',
                 detail:'手工制作，值得拥有，手工制作，值得拥有，快点加入购物车吧！'
               },
               {
+                id:'2',
                 title:'玻璃杯',
                 price:80,
                 images:'http://cdn.qiqiangkeji.com/20180926.9383d209c5395f8598ca9a2731696a94_850x680.jpg',
                 detail:'手工制作，值得拥有'
               },
               {
+                id:'3',
                 title:'高级吸汗毛巾',
                 price:90,
                 images:'http://cdn.qiqiangkeji.com/20180926.83a59e1a91b31003fc2b2beffd7702b7_320x220.jpg',
                 detail:'手工制作，值得拥有，手工制作，值得拥有，快点加入购物车吧！'
               },
               {
+                id:'4',
                 title:'纯棉围巾',
                 price:125,
                 images:'http://cdn.qiqiangkeji.com/20180926.3015a6dd5205bb599914c7b972f11f04_500x500.jpg',
@@ -117,48 +125,56 @@
             ],
             list_1:[
               {
+                id:'5',
                 title:'陶瓷杯1',
                 price:100,
                 images:'http://cdn.qiqiangkeji.com/20180926.fff7f6be283261b884d7f400be65e1b1_1024x710.jpg',
                 detail:'手工制作，值得拥有，快点加入购物车吧！'
               },
               {
+                id:'6',
                 title:'玻璃杯1',
                 price:200,
                 images:'http://cdn.qiqiangkeji.com/20180926.9383d209c5395f8598ca9a2731696a94_850x680.jpg',
                 detail:'手工制作，值得拥有'
               },
               {
+                id:'7',
                 title:'高级吸汗毛巾1',
                 price:10,
                 images:'http://cdn.qiqiangkeji.com/20180926.83a59e1a91b31003fc2b2beffd7702b7_320x220.jpg',
                 detail:'手工制作，值得拥有，手工制作，值得拥有，快点加入购物车吧！'
               },
               {
+                id:'8',
                 title:'纯棉围巾1',
                 price:120,
                 images:'http://cdn.qiqiangkeji.com/20180926.3015a6dd5205bb599914c7b972f11f04_500x500.jpg',
                 detail:'手工制作，值得拥有，手工制作，值得拥有，快点加入购物车吧！'
               },
               {
+                id:'5',
                 title:'陶瓷杯1',
                 price:60,
                 images:'http://cdn.qiqiangkeji.com/20180926.fff7f6be283261b884d7f400be65e1b1_1024x710.jpg',
                 detail:'手工制作，值得拥有'
               },
               {
+                id:'6',
                 title:'玻璃杯1',
                 price:80,
                 images:'http://cdn.qiqiangkeji.com/20180926.9383d209c5395f8598ca9a2731696a94_850x680.jpg',
                 detail:'手工制作，值得拥有，手工制作，值得拥有，快点加入购物车吧！'
               },
               {
+                id:'7',
                 title:'高级吸汗毛巾1',
                 price:90,
                 images:'http://cdn.qiqiangkeji.com/20180926.83a59e1a91b31003fc2b2beffd7702b7_320x220.jpg',
                 detail:'手工制作，值得拥有，手工制作，值得拥有，快点加入购物车吧！'
               },
               {
+                id:'8',
                 title:'纯棉围巾1',
                 price:125,
                 images:'http://cdn.qiqiangkeji.com/20180926.3015a6dd5205bb599914c7b972f11f04_500x500.jpg',
@@ -167,48 +183,56 @@
             ],
             list_2:[
               {
+                id:'9',
                 title:'陶瓷杯2',
                 price:100,
                 images:'http://cdn.qiqiangkeji.com/20180926.fff7f6be283261b884d7f400be65e1b1_1024x710.jpg',
                 detail:'手工制作，值得拥有，快点加入购物车吧！'
               },
               {
+                id:'10',
                 title:'玻璃杯2',
                 price:200,
                 images:'http://cdn.qiqiangkeji.com/20180926.9383d209c5395f8598ca9a2731696a94_850x680.jpg',
                 detail:'手工制作，值得拥有'
               },
               {
+                id:'11',
                 title:'高级吸汗毛巾2',
                 price:10,
                 images:'http://cdn.qiqiangkeji.com/20180926.83a59e1a91b31003fc2b2beffd7702b7_320x220.jpg',
                 detail:'手工制作，值得拥有，手工制作，值得拥有，快点加入购物车吧！'
               },
               {
+                id:'12',
                 title:'纯棉围巾2',
                 price:120,
                 images:'http://cdn.qiqiangkeji.com/20180926.3015a6dd5205bb599914c7b972f11f04_500x500.jpg',
                 detail:'手工制作，值得拥有，手工制作，值得拥有，快点加入购物车吧！'
               },
               {
+                id:'9',
                 title:'陶瓷杯2',
                 price:60,
                 images:'http://cdn.qiqiangkeji.com/20180926.fff7f6be283261b884d7f400be65e1b1_1024x710.jpg',
                 detail:'手工制作，值得拥有'
               },
               {
+                id:'10',
                 title:'玻璃杯2',
                 price:80,
                 images:'http://cdn.qiqiangkeji.com/20180926.9383d209c5395f8598ca9a2731696a94_850x680.jpg',
                 detail:'手工制作，值得拥有，手工制作，值得拥有，快点加入购物车吧！'
               },
               {
+                id:'11',
                 title:'高级吸汗毛巾2',
                 price:90,
                 images:'http://cdn.qiqiangkeji.com/20180926.83a59e1a91b31003fc2b2beffd7702b7_320x220.jpg',
                 detail:'手工制作，值得拥有，手工制作，值得拥有，快点加入购物车吧！'
               },
               {
+                id:'12',
                 title:'纯棉围巾2',
                 price:125,
                 images:'http://cdn.qiqiangkeji.com/20180926.3015a6dd5205bb599914c7b972f11f04_500x500.jpg',
@@ -279,7 +303,7 @@
         },
       },
       activated(){
-          console.log(this.$route.meta.isUseCache)
+          // console.log(this.$route.meta.isUseCache)
           if(!this.$route.meta.isUseCache){
             this.list = [];
             this.shop_list();

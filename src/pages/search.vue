@@ -19,7 +19,7 @@
         <div>
           <h5>热搜</h5>
           <ul class="hot_search slide-box">
-            <li class="slide-item" v-for="(value,index) in slide_item" :key="index">{{value}}</li>
+            <li class="slide-item" v-for="(value,index) in slide_item" @click="hot_search(index)" :key="index">{{value}}</li>
           </ul>
         </div>
         <div v-if="past_item.length>0">
@@ -155,13 +155,18 @@
         clearList(){
           this.past_item = []
         },
+        hot_search(index){
+          $('.search_val').val(this.slide_item[index]);
+          this.submit();
+        },
         submit(){
-            var that = this;
+          var that = this;
           that.list = [];
           that.input_val = $.trim($('.search_val').val())
           if($.trim($('.search_val').val())!='' && $.trim($('.search_val').val())!= null){
             that.title_IsShow = false;
-            this.past_item.push(that.input_val);
+            that.past_item.push(that.input_val);
+            that.past_item = Array.from(new Set(that.past_item));
             $(".search_val").blur();
             that.shopList()
           }else {
@@ -179,7 +184,6 @@
         },
         focus(){
           var that = this;
-          console.log(that.input_val)
           if($.trim($('.search_val').val())!='' && $.trim($('.search_val').val())!=null){
             $(".search_val").val('');
             that.list = [];
